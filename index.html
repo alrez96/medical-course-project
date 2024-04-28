@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>سامانه جامع پزشکان</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="stylesheet" href="public/css/themify-icons.css">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/css/style-override.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="public/js/script.js"></script>
+  <script src="public/js/script-override.js"></script>
+</head>
+<body class="app">
+  <div class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-logo">
+        <div class="peers ai-c fxw-nw">
+          <div class="peer peer-greed">
+            <a class="sidebar-link td-n" href="#" class="td-n">
+              <div class="peers ai-c fxw-nw">
+                <div class="peer peer-greed">
+                  <h5 class="lh-1 mB-0 logo-text">سامانه جامع پزشکان</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <ul class="sidebar-menu scrollable pos-r">
+        <li class="nav-item mT-30 active">
+          <a class="sidebar-link" href="#" default>
+            <span class="icon-holder">
+              <i class="c-blue-500 ti-home"></i>
+            </span><span class="title">صفحه اصلی</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="sidebar-link" href="#">
+            <span class="icon-holder">
+              <i class="c-red-500 ti-comments"></i>
+            </span><span class="title">مشاوره آنلاین</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+              <i class="c-purple-500 ti-bookmark"></i>
+            </span><span class="title">نوبت‌دهی</span>
+            <span class="arrow">
+              <i class="ti-angle-left"></i>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="sidebar-link" href="#">فهرست نوبت‌‌ها</a>
+            </li>
+            <li>
+              <a class="sidebar-link" href="#">ثبت نوبت جدید</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+              <i class="c-orange-500 ti-calendar"></i>
+            </span><span class="title">زمانبندی</span>
+            <span class="arrow">
+              <i class="ti-angle-left"></i>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="sidebar-link" href="#">فهرست زمانبندی</a>
+            </li>
+            <li>
+              <a class="sidebar-link" href="#">ثبت زمان جدید</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+              <i class="c-brown-500 ti-infinite"></i>
+            </span><span class="title">کلینیک‌ها</span>
+            <span class="arrow">
+              <i class="ti-angle-left"></i>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="sidebar-link" href="#">فهرست کلینیک‌ها</a>
+            </li>
+            <li>
+              <a class="sidebar-link" href="#">ثبت کلینیک‌ جدید</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+              <i class="c-teal-500 ti-support"></i>
+            </span><span class="title">پزشکان</span>
+            <span class="arrow">
+              <i class="ti-angle-left"></i>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="sidebar-link" href="#">فهرست پزشکان</a>
+            </li>
+            <li>
+              <a class="sidebar-link" href="#">ثبت پزشک جدید</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" href="javascript:void(0);">
+            <span class="icon-holder">
+              <i class="c-pink-500 ti-wheelchair"></i>
+            </span><span class="title">بیماران</span>
+            <span class="arrow">
+              <i class="ti-angle-left"></i>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="sidebar-link" href="#">فهرست بیماران</a>
+            </li>
+            <li>
+              <a class="sidebar-link" href="#">ثبت بیمار جدید</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-container">
+    <div class="header navbar">
+      <div class="header-container">
+        <ul class="nav-right nav-right-ov">
+          <li>
+            <a id="sidebar-toggle" class="sidebar-toggle" href="javascript:void(0);">
+              <i class="ti-menu"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav-left nav-left-ov">
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
+              <div class="peer mL-10">
+                <img class="w-2r bdrs-50p" src="resources/images/users/user-default.png" alt="user-photo">
+              </div>
+              <div class="peer">
+                <span class="fsz-sm c-grey-900">علیرضا رستمی</span>
+              </div>
+            </a>
+            <ul class="dropdown-menu fsz-sm">
+              <li>
+                <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                  <i class="ti-settings mL-10"></i>
+                  <span>تنظیمات</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                  <i class="ti-user mL-10"></i>
+                  <span>پروفایل</span>
+                </a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                  <i class="ti-power-off mL-10"></i>
+                  <span>خروج</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="notifications dropdown">
+            <span class="counter bgc-red">۳</span>
+            <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+              <i class="ti-bell"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="pX-20 pY-15 bdB">
+                <i class="ti-bell pL-10"></i>
+                <span class="fsz-sm fw-600 c-grey-900">اطلاع‌رسانی‌ها</span>
+              </li>
+              <li>
+                <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm"><li>
+                  <a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                    <div class="peer mL-15">
+                      <img class="w-3r bdrs-50p" src="resources/images/users/user-default.png" alt="user-photo">
+                    </div>
+                    <div class="peer peer-greed">
+                      <span>
+                        <span class="fw-500">کاربر شماره ۱۰</span> <span class="c-grey-600">یک نوبت جدید ثبت کرد.</span>
+                      </span>
+                      <p class="m-0">
+                        <small class="fsz-xs">۵ دقیقه قبل</small>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm"><li>
+                  <a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                    <div class="peer mL-15">
+                      <img class="w-3r bdrs-50p" src="resources/images/users/user-default.png" alt="user-photo">
+                    </div>
+                    <div class="peer peer-greed">
+                      <span>
+                        <span class="fw-500">کاربر شماره ۵</span> <span class="c-grey-600">در سامانه ثبت نام کرد.</span>
+                      </span>
+                      <p class="m-0">
+                        <small class="fsz-xs">۱ ساعت قبل</small>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm"><li>
+                  <a href="" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
+                    <div class="peer mL-15">
+                      <img class="w-3r bdrs-50p" src="resources/images/users/user-default.png" alt="user-photo">
+                    </div>
+                    <div class="peer peer-greed">
+                      <span>
+                        <span class="fw-500">کاربر شماره ۲</span> <span class="c-grey-600">یک نوبت جدید ثبت کرد.</span>
+                      </span>
+                      <p class="m-0">
+                        <small class="fsz-xs">۶ ساعت قبل</small>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="main-content bgc-grey-100">
+      <div id="mainContent">
+        <div class="row gap-20 pos-r">
+          <div class="masonry-item col-12">
+            <div class="bd bgc-white">
+              <div class="peers fxw-nw@lg+ ai-s">
+                <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+                  <div class="layers">
+                    <div class="layer w-100 mB-10">
+                      <h6 class="lh-1">آمار سامانه</h6>
+                    </div>
+                    <div class="layer w-100">
+                      <div class="row gap-20">
+                        <div class="col-md-3">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">تعداد کلینیک‌ها</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                <div class="peer peer-greed">
+                                  <span id="sparklinedash">
+                                    <canvas width="45" height="20" style="display: inline-block; width: 45px; height: 20px; vertical-align: top;"></canvas>
+                                  </span>
+                                </div>
+                                <div class="peer">
+                                  <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">۱۰٪+</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">تعداد پزشکان</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                <div class="peer peer-greed">
+                                  <span id="sparklinedash2">
+                                    <canvas width="45" height="20" style="display: inline-block; width: 45px; height: 20px; vertical-align: top;"></canvas>
+                                  </span>
+                                </div>
+                                <div class="peer">
+                                  <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">۷٪-</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">تعداد بیماران</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                <div class="peer peer-greed">
+                                  <span id="sparklinedash3">
+                                    <canvas width="45" height="20" style="display: inline-block; width: 45px; height: 20px; vertical-align: top;"></canvas>
+                                  </span>
+                                </div>
+                                <div class="peer">
+                                  <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">۱۲٪~</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">نوبت‌‌ها</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="peers ai-sb fxw-nw">
+                                <div class="peer peer-greed">
+                                  <span id="sparklinedash4">
+                                    <canvas width="45" height="20" style="display: inline-block; width: 45px; height: 20px; vertical-align: top;"></canvas>
+                                  </span>
+                                </div>
+                                <div class="peer">
+                                  <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">۳۳٪</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item col-12">
+            <div class="bd bgc-white">
+              <div class="peers fxw-nw@lg+ ai-s">
+                <div class="peer peer-greed w-70p@lg+ w-100@lg-">
+                  <div class="layers">
+                    <div class="layer w-100 mB-10 p-20">
+                      <h6 class="lh-1">آخرین نوبت‌‌های ثبت شده</h6>
+                    </div>
+                    <div class="layer w-100">
+                      <div class="table-responsive p-20">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th class="bdwT-0">نام کاربر</th>
+                              <th class="bdwT-0">وضعیت</th>
+                              <th class="bdwT-0">تاریخ</th>
+                              <th class="bdwT-0">مبلغ ویزیت</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="fw-600">کاربر شماره ۱</td>
+                              <td>
+                                <span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">پرداخت نشده</span>
+                              </td>
+                              <td>۱۳۹۸/۰۵/۰۱</td>
+                              <td>
+                                <span class="text-success">۵۰ هزار تومان</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="fw-600">کاربر شماره ۲</td>
+                              <td>
+                                <span class="badge bgc-orange-50 c-orange-700 p-10 lh-0 tt-c badge-pill">در انتظار نوبت</span>
+                              </td>
+                              <td>۱۳۹۸/۰۵/۱۰</td>
+                              <td>
+                                <span class="text-success">۳۵ هزار تومان</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="fw-600">کاربر شماره ۳</td>
+                              <td>
+                                <span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">پرداخت شده</span>
+                              </td>
+                              <td>۱۳۹۸/۰۵/۱۹</td>
+                              <td>
+                                <span class="text-success">۶۵ هزار تومان</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="fw-600">کاربر شماره ۴</td>
+                              <td>
+                                <span class="badge bgc-deep-purple-50 c-deep-purple-700 p-10 lh-0 tt-c badge-pill">خاتمه یافته</span>
+                              </td>
+                              <td>۱۳۹۸/۰۵/۰۳</td>
+                              <td>
+                                <span class="text-success">۴۰ هزار تومان</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item col-12">
+            <div class="bd bgc-white">
+              <div class="peers fxw-nw@lg+ ai-s">
+                <div class="peer peer-greed w-70p@lg+ w-100@lg-">
+                  <div class="layers">
+                    <div class="layer w-100 mB-10 p-20-b">
+                      <h6 class="lh-1">کلینیک‌های برتر</h6>
+                    </div>
+                    <div class="layer w-100 p-20-t">
+                      <div class="row gap-20">
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۱</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/clinics/clinic-1.jpg" alt="clinic-photo">
+                              </div>
+                              <div class="state-ck">
+                                منطقه: شریعتی
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۲</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/clinics/clinic-2.jpg" alt="clinic-photo">
+                              </div>
+                              <div class="state-ck">
+                                منطقه: پاسداران
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۳</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/clinics/clinic-3.jpg" alt="clinic-photo">
+                              </div>
+                              <div class="state-ck">
+                                منطقه: سعادت آباد
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۴</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/clinics/clinic-4.jpg" alt="clinic-photo">
+                              </div>
+                              <div class="state-ck">
+                                منطقه: شهرک غرب
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۵</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/clinics/clinic-5.jpg" alt="clinic-photo">
+                              </div>
+                              <div class="state-ck">
+                                منطقه: ولنجک
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۶</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/clinics/clinic-6.jpeg" alt="clinic-photo">
+                              </div>
+                              <div class="state-ck">
+                                منطقه: زعفرانیه
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ta-c bdT w-100 p-20"><a href="#">مشاهده لیست کامل کلینیک‌ها</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item col-12">
+            <div class="bd bgc-white">
+              <div class="peers fxw-nw@lg+ ai-s">
+                <div class="peer peer-greed w-70p@lg+ w-100@lg-">
+                  <div class="layers">
+                    <div class="layer w-100 mB-10 p-20-b">
+                      <h6 class="lh-1">پزشکان برتر</h6>
+                    </div>
+                    <div class="layer w-100 p-20-t">
+                      <div class="row gap-20">
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۱</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/users/user-1.jpg" alt="user-photo">
+                              </div>
+                              <div class="state-ck">
+                                تخصص: روان‌پزشک
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۲</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/users/user-2.jpg" alt="user-photo">
+                              </div>
+                              <div class="state-ck">
+                                تخصص: روان‌پزشک
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۳</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/users/user-3.png" alt="user-photo">
+                              </div>
+                              <div class="state-ck">
+                                تخصص: روان‌شناس
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۴</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/users/user-4.jpg" alt="user-photo">
+                              </div>
+                              <div class="state-ck">
+                                تخصص: روان‌پزشک
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۵</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/users/user-5.jpeg" alt="user-photo">
+                              </div>
+                              <div class="state-ck">
+                                تخصص: روان‌شناس
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="layers bd bgc-white p-20">
+                            <div class="layer w-100 mB-10">
+                              <h6 class="lh-1">شماره ۶</h6>
+                            </div>
+                            <div class="layer w-100">
+                              <div class="col-2-image">
+                                <img src="resources/images/users/user-6.jpg" alt="user-photo">
+                              </div>
+                              <div class="state-ck">
+                                تخصص: روان‌شناس
+                              </div>
+                              <div class="rate-sys">
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                                <span class="fa fa-star start_checked"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ta-c bdT w-100 p-20"><a href="#">مشاهده لیست کامل پزشکان</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+      <span>کلیه حقوق برای طراح محفوظ است :)</span>
+    </footer>
+  </div>
+  <script type="8f2a3e5dc2ceadc589feb75a-text/javascript" src="https://colorlib.com/polygon/adminator/vendor.js"></script>
+  <script type="8f2a3e5dc2ceadc589feb75a-text/javascript" src="https://colorlib.com/polygon/adminator/bundle.js"></script>
+  <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/a2bd7673/cloudflare-static/rocket-loader.min.js" data-cf-settings="8f2a3e5dc2ceadc589feb75a-|49" defer=""></script>
+</body>
+</html>

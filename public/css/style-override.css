@@ -1,0 +1,139 @@
+@import url("fontiran.css");
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: IRANSans, sans-serif!important;
+  direction: rtl!important;
+  text-align: right!important;
+  color: #72777a!important;
+}
+
+.sidebar-logo {
+  border-right: 0!important;
+  border-left: 1px solid rgba(0,0,0,.0625)!important;
+  height: 65px!important;
+  line-height: 65px!important;
+}
+
+.sidebar-logo h5 {
+  text-align: center!important;
+}
+
+.sidebar-menu {
+  border-left: 1px solid rgba(0,0,0,.0625)!important;
+  border-right: 0!important;
+}
+
+.sidebar-menu>li>a .icon-holder {
+  margin-right: 0!important;
+  margin-left: 14px!important;
+  left: -2px!important;
+}
+
+.dropdown-menu {
+  text-align: right!important;
+}
+
+.sidebar-menu>li.dropdown ul.dropdown-menu {
+  padding-right: 50px!important;
+  padding-left: 0!important;
+}
+
+.sidebar-menu li.dropdown .arrow {
+  text-align: left;
+  left: 30px!important;
+  right: auto!important;
+}
+
+.nav-right-ov {
+  margin-right: 15px!important;
+  padding-right: 0!important;
+}
+
+.nav-left-ov {
+  margin-left: 0!important;
+  padding-right: 0!important;
+}
+
+.header .header-container .nav-left .dropdown-menu>li>a {
+  text-align: right!important;
+  line-height: 1.5!important;
+  min-height: auto!important;
+  padding: 10px 15px!important;
+}
+
+.header .header-container .dropdown-menu {
+  transform-origin: top left!important;
+}
+
+.p-20-bottom-d {
+  padding-bottom: 0!important;
+}
+
+.start_checked {
+  color: orange;
+}
+
+.col-2-image{
+  width: 100%!important;
+}
+
+.col-2-image img {
+  width: 85px;
+  height: 85px;
+  display:block;
+  margin: auto;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.rate-sys {
+  text-align: center;
+  font-size: 14px;
+}
+
+.state-ck {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.p-20-b {
+  padding: 20px 20px 0 20px;
+}
+
+.p-20-t {
+  padding: 0 20px 20px 20px;
+}
+
+table {
+  color: #72777a!important;
+}
+
+small {
+  font-family: IRANSans, sans-serif!important;
+}
+
+.badge-pill {
+  font-size: 85%!important;
+}
+
+.sign-title {
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, .3);
+  padding: 15px;
+  border: 2px solid black;
+}
+
+.checkbox label {
+  padding-left: 0!important;
+  padding-right: 17px!important;
+}
+
+.checkbox label:after, .checkbox label:before {
+  margin-right: -12px!important;
+  margin-left: 0!important;
+  right: 0!important;
+  left: auto!important;
+  outline: none;
+}
